@@ -1,19 +1,34 @@
 # Prevent computer or display sleep with HTML5/JavaScript
 
-Insert the `sleep.js` script in your page, then control the computer's sleep functionality by calling:
+Include the `sleep.js` script in your page, then control the computer's sleep functionality by calling:
 
      sleep.prevent()
      sleep.allow()
+     
+## Limitations
 
-This approach uses a small empty video that is inserted in the page, but off-screen, without sound, but (important!) with an audio track.
+TODO
+- Check all browsers
+- Check when not active window
+- Check when not active tab
 
-This hack in reality controls the video playback, which is what makes the browser stay awake.
+## How does it work?
 
-In case of error, check that the videos are accessible:
+This approach uses a small empty video that is inserted in the page, but off-screen, without sound, but importantly: with an audio track.
+
+This hack in reality controls the video playback which is what makes the browser stay awake.
+
+## Troubleshooting
+
+The videos files are at these locations; make sure they are accessible:
 
 [https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4](https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4)
 
 [https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.ogv](https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.ogv)
+
+Check that your browser supports these video formats.
+
+Check that your browser normally stays awake when playing video.
 
 ## References:
 
