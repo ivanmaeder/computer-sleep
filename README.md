@@ -4,13 +4,20 @@ Include the `sleep.js` script in your page, then control the computer's sleep fu
 
      sleep.prevent()
      sleep.allow()
-     
+
+Take a look at the `example.html` file to see it in action.
+
 ## Limitations
 
-TODO
-- Check all browsers
-- Check when not active window
-- Check when not active tab
+Tested on 2015-01-01 on Mac OS X Yosemite (10.10.1) with Chrome 39.0.2171.95, Firefox 34.0.5, Safari 8.0.2.
+
+This table explains the ability of the script to prevent sleep in different scenarios.
+
+                               |IE |Chrome|Firefox|Safari
+-------------------------------|:-:|:----:|:-----:|:----:
+If is selected tab             |?  |Yes   |Yes    |No    
+If is not selected tab         |?  |No    |Yes    |No    
+If browser isn't in foreground |?  |Yes   |Yes    |No    
 
 ## How does it work?
 
@@ -20,7 +27,7 @@ This hack in reality controls the video playback which is what makes the browser
 
 ## Troubleshooting
 
-The videos files are at these locations; make sure they are accessible:
+The video files are at these locations; make sure they are accessible:
 
 [https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4](https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4)
 

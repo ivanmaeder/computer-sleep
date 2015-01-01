@@ -18,7 +18,7 @@
  -
 
  Prevent computer or display sleep with HTML5/JavaScript. Include this
- file and use the following:
+ file then use the following:
 
      sleep.prevent()
      sleep.allow()
