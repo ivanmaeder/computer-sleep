@@ -9,7 +9,11 @@ This approach uses a small empty video that is inserted in the page, but off-scr
 
 This hack in reality controls the video playback, which is what makes the browser stay awake.
 
-In case of error, check that the [video](https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4) is accessible.
+In case of error, check that the videos are accessible:
+
+[https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4](https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4)
+
+[https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.ogv](https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.ogv)
 
 ## References:
 
