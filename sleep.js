@@ -1,25 +1,28 @@
 /*
- Copyright (C) 2014 Ivan Maeder
- 
+
+ Copyright (C) 2015 Ivan Maeder
+
  This program is free software: you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
  (at your option) any later version.
- 
+
  This program is distributed in the hope that it will be useful,
  but WITHOUT ANY WARRANTY; without even the implied warranty of
  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  GNU General Public License for more details.
- 
+
  You should have received a copy of the GNU General Public License
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 
-/* Prevent computer or display sleep with HTML5/JavaScript, using the
- following functions:
+ -
+
+ Prevent computer or display sleep with HTML5/JavaScript. Include this
+ file and use the following:
 
      sleep.prevent()
      sleep.allow()
+
  */
 var sleep = {
     prevent: function() {
@@ -35,11 +38,11 @@ var sleep = {
         this._video.setAttribute('width', '10');
         this._video.setAttribute('height', '10');
         this._video.style.position = 'absolute';
-        this._video.style.top = '-10px';
-        this._video.style.left = '-10px';
+        this._video.style.top = '0px';
+        this._video.style.left = '0px';
 
         var source = document.createElement('source');
-        source.setAttribute('src', '/lib/muted-blank.mp4');
+        source.setAttribute('src', 'https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4');
         source.setAttribute('type', 'video/mp4');
 
         this._video.appendChild(source);
