@@ -39,7 +39,7 @@ var sleep = {
         }
 
         this._video.removeAttribute('loop');
-        this._video.stop();
+        this._video.pause();
     },
     _init: function() {
         this._video = document.createElement('video');
