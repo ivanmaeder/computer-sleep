@@ -1,23 +1,39 @@
-# Prevent computer or display sleep with HTML5/JavaScript
+# Prevent sleep inside the browser
+
+This script prevents computer or display sleep with HTML5/JavaScript.
+
+## Instructions
 
 Include the `sleep.js` script in your page, then control the computer's sleep functionality by calling:
 
-     sleep.prevent()
-     sleep.allow()
-
-Take a look at the `example.html` file to see it in action.
+```
+sleep.prevent()
+sleep.allow()
+```
 
 ## Limitations
 
-Tested on 2015-01-01 on Mac OS X Yosemite (10.10.1) with Chrome 39.0.2171.95, Firefox 34.0.5, Safari 8.0.2.
+These tables explains the ability of the script to prevent sleep in different scenarios.
 
-This table explains the ability of the script to prevent sleep in different scenarios.
+### macOS
 
-                               |IE |Chrome|Firefox|Safari
--------------------------------|:-:|:----:|:-----:|:----:
-If is selected tab             |?  |Yes   |Yes    |No    
-If is not selected tab         |?  |No    |Yes    |No    
-If browser isn't in foreground |?  |Yes   |Yes    |No    
+Tested on the following browsers: Chrome 52, Firefox 46 and Safari 9. Firefox and Safari display an audio icon when sleep is being prevented.
+
+                                  |Chrome  |Firefox |Safari
+----------------------------------|:------:|:------:|:------:
+Active tab                        |&#10004;|&#10004;|&#10008;
+Active tab; browser in background |&#10004;|&#10004;|&#10008;
+Active tab; browser minimised     |&#10004;|&#10008;|&#10008;
+Background tab                    |&#10008;|&#10008;|&#10008;
+
+### Windows
+
+                                  |Chrome  |Firefox |IE 9    |IE 10   |IE 11
+----------------------------------|:------:|:------:|:------:|:------:|:------:
+Active tab                        |?       |?       |?       |?       |?
+Active tab; browser in background |?       |?       |?       |?       |?
+Active tab; browser minimised     |?       |?       |?       |?       |?
+Background tab                    |?       |?       |?       |?       |?
 
 ## How does it work?
 
@@ -27,7 +43,7 @@ This hack in reality controls the video playback which is what makes the browser
 
 ## Troubleshooting
 
-The video files are at these locations; make sure they are accessible:
+The video files are at these locations; make sure there are no problems accessing them:
 
 [https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4](https://github.com/ivanmaeder/computer-sleep/raw/master/resources/muted-blank.mp4)
 
@@ -37,7 +53,7 @@ Check that your browser supports these video formats.
 
 Check that your browser normally stays awake when playing video.
 
-## References:
+## References
 
 [http://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5](http://stackoverflow.com/questions/10377453/play-infinitely-looping-video-on-load-in-html5)
 
