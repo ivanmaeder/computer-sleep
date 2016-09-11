@@ -5,7 +5,11 @@
     <title>Prevent computer or display sleep with HTML5/JavaScript</title>
     <script src="sleep.js"></script>
   </head>
-  <body onload="sleep.prevent()">
-    This page will keep your computer up all night.
+  <body>
+    Keep your computer up all night:
+    <input type="button" onclick="sleep.prevent()" value="sleep.prevent()"><br>
+    <br>
+    Go back to sleep:
+    <input type="button" onclick="sleep.allow()" value="sleep.allow()"><br>
   </body>
 </html>
