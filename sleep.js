@@ -35,7 +35,7 @@ var sleep = {
     },
     allow: function() {
         if (!this._video) {
-            this._init();
+	    return;
         }
 
         this._video.removeAttribute('loop');
