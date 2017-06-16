@@ -1,4 +1,4 @@
-# Prevent sleep inside the browser
+# Prevent sleep from inside the browser
 
 This script prevents computer or display sleep with HTML5/JavaScript.
 
@@ -11,35 +11,32 @@ sleep.prevent()
 sleep.allow()
 ```
 
-## Limitations
+## How does it work?
+This hack stops sleep from happening by playing a small video off-screen.
 
-These tables explains the ability of the script to prevent sleep in different scenarios.
+The tables below explain the ability of the script to prevent sleep in different scenarios.
 
 ### macOS
 
-Tested on the following browsers: Chrome 52, Firefox 46 and Safari 9. Firefox and Safari display an audio icon when sleep is being prevented.
+Tested on Chrome 52-58, Firefox 46-53 and Safari 9-10. Firefox and Safari display an audio icon while sleep is prevented.
 
-                                  |Chrome  |Firefox |Safari
-----------------------------------|:------:|:------:|:------:
-Active tab                        |&#10004;|&#10004;|&#10008;
-Active tab; browser in background |&#10004;|&#10004;|&#10008;
-Active tab; browser minimised     |&#10004;|&#10008;|&#10008;
-Background tab                    |&#10008;|&#10008;|&#10008;
+For Chrome, this is the same behaviour as on YouTube.
+
+|                                  |Chrome  |Firefox |Safari  |
+|----------------------------------|:------:|:------:|:------:|
+|Active tab                        |&#10004;|&#10004;|&#10008;|
+|Active tab; browser in background |&#10004;|&#10004;|&#10008;|
+|Active tab; browser minimised     |&#10004;|&#10008;|&#10008;|
+|Background tab                    |&#10008;|&#10008;|&#10008;|
 
 ### Windows
 
-                                  |Chrome  |Firefox |IE 9    |IE 10   |IE 11
-----------------------------------|:------:|:------:|:------:|:------:|:------:
-Active tab                        |?       |?       |?       |?       |?
-Active tab; browser in background |?       |?       |?       |?       |?
-Active tab; browser minimised     |?       |?       |?       |?       |?
-Background tab                    |?       |?       |?       |?       |?
-
-## How does it work?
-
-This approach uses a small empty video that is inserted in the page, but off-screen, without sound, but importantly: with an audio track.
-
-This hack in reality controls the video playback which is what makes the browser stay awake.
+|                                  |Chrome  |Firefox |IE 9    |IE 10   |IE 11   |
+|----------------------------------|:------:|:------:|:------:|:------:|:------:|
+|Active tab                        |?       |?       |?       |?       |?       |
+|Active tab; browser in background |?       |?       |?       |?       |?       |
+|Active tab; browser minimised     |?       |?       |?       |?       |?       |
+|Background tab                    |?       |?       |?       |?       |?       |
 
 ## Troubleshooting
 
@@ -52,6 +49,8 @@ The video files are at these locations; make sure there are no problems accessin
 Check that your browser supports these video formats.
 
 Check that your browser normally stays awake when playing video.
+
+If you want to use your own video, make sure it has an audio track.
 
 ## References
 
